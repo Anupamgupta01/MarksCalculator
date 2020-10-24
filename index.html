@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            Calculate Proper marks
+        </title>
+        <script>
+            function Calculate()
+            {
+                var sem1 = document.getElementById("first").value;
+                var sem2 = document.getElementById("second").value;
+                var year1= ( Number(sem1) + Number(sem2))*0.2;
+                var sem3 = document.getElementById("third").value;
+                var sem4 = document.getElementById("fourth").value;
+                var sem5 = document.getElementById("fifth").value;
+                var sem6 = document.getElementById("sixth").value;
+                var year23=(Number(sem3)+Number(sem4)+Number(sem5)+Number(sem6))*0.4;
+                var total= (Number(year1)+Number(year23))/21.4;
+                document.getElementById("Percent").innerHTML="your Percentage is " + total;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Calculate your Percentage in Diploma</h1>
+        </div>
+        <div>
+            <label for="">Semester-1 Marks</label>
+            <input type="number" id="first"></input><br>
+            <label for="">Semester-2 Marks</label>
+            <input type="number" id="second"></input><br>
+            <label for="">Semester-3 Marks</label>
+            <input type="number" id="third"></input><br>
+            <label for="">Semester-4 Marks</label>
+            <input type="number" id="fourth"></input><br>
+            <label for="">Semester-5 Marks</label>
+            <input type="number" id="fifth"></input><br>
+            <label for="">Semester-6 Marks</label>
+            <input type="number" id="sixth"></input><br>
+            <button onclick="Calculate()">Submit</button>
+            <p id="Percent"></p>
+        </div>
+    </body>
+</html>
